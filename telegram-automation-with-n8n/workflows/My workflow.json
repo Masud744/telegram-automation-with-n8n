@@ -1,0 +1,64 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -464,
+        -64
+      ],
+      "id": "e71d0be1-f84a-4a77-ab18-811c37884a9c",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "✅ Automation successful!",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -256,
+        -64
+      ],
+      "id": "92309d41-0989-4e41-8eb5-b8922964f2a1",
+      "name": "Send a text message",
+      "webhookId": "bd387ff3-0483-498d-98ca-5aa838a42519",
+      "credentials": {
+        "telegramApi": {
+          "id": "5P9jI7z053rdHJ5x",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "464405da-4c7b-4569-aa01-777b64999cb1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1664e9cfffd4290dc8241a338f9d6ac40daca84464ea93a16d7a6a05e08235f5"
+  },
+  "id": "A6Zf14hdiMV2WHQd",
+  "tags": []
+}
